@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Interactive rating component</title>
+  <link href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,700;1,500&display=swap" rel="stylesheet">
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+
+    body {
+      background-color: hsl(216, 12%, 8%);
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      /* font-family: Overpass; */
+
+    }
+
+    .first {
+
+      background-color: hsl(213, 19%, 18%);
+      height: 20.625rem;
+      width: 21.875rem;
+      margin: auto;
+      margin-top: 10.9375rem;
+      border-radius: 0.9375rem;
+
+    }
+
+    .second {
+      height: 3.75rem;
+      width: 5rem;
+      display: flex;
+
+    }
+
+    .third {
+      margin-top: 0.9375rem;
+      background-color: hsl(216, 12%, 54%);
+      height: 3rem;
+      width: 3rem;
+      border-radius: 50%;
+      text-align: center;
+      margin-left: 1.25rem;
+      margin-bottom: 1.25rem;
+
+
+
+    }
+
+    .image1 {
+
+      padding-top: 0.75rem;
+    }
+
+    .four {
+      font-size: 1.5625rem;
+      font-weight: 43.75rem;
+      font-family: Overpass;
+      color: white;
+      justify-content: space-between;
+      margin-left: 1.25rem;
+      margin-top: 0.625rem;
+    }
+
+    .five {
+      font-size: 14px;
+      font-family: Overpass;
+      color: hsl(216, 12%, 54%);
+      margin-left: 1.25rem;
+      margin-top: 0.625rem;
+      font-weight: 400;
+      display: flex;
+    }
+
+    .six {
+      display: flex;
+
+    }
+
+    .star1 {
+      margin-top: 15px;
+      background-color: hsl(216, 12%, 54%);
+      height: 30px;
+      width: 30px;
+      border-radius: 50%;
+
+      padding: 0.625rem;
+      /* padding-left: 18px; */
+      font-size: 1.5625rem;
+      margin-left: 1.5625rem;
+      margin-bottom: 1.25rem;
+      font-family: Overpass;
+      text-align: center;
+      color: hsl(217, 12%, 63%);
+
+    }
+
+    .star2 {
+      margin-top: 15px;
+      background-color: hsl(216, 12%, 54%);
+      height: 30px;
+      width: 30px;
+      border-radius: 50%;
+      text-align: center;
+      padding: 0.625rem;
+      font-size: 1.5625rem;
+      margin-left: 0.625rem;
+      margin-bottom: 1.25rem;
+      font-family: Overpass;
+      color: hsl(217, 12%, 63%);
+    }
+
+    .star3 {
+      margin-top: 15px;
+      background-color: hsl(216, 12%, 54%);
+      height: 30px;
+      width: 30px;
+      border-radius: 50%;
+      text-align: center;
+      padding: 0.625rem;
+      font-size: 1.5625rem;
+      margin-left: 0.625rem;
+      margin-bottom: 1.25rem;
+      font-family: Overpass;
+      color: hsl(217, 12%, 63%);
+    }
+
+    .star4 {
+      margin-top: 15px;
+      background-color: hsl(216, 12%, 54%);
+      height: 30px;
+      width: 30px;
+      border-radius: 50%;
+      text-align: center;
+      padding: 0.625rem;
+      font-size: 1.5625rem;
+      margin-left: 10px;
+      margin-bottom: 1.25rem;
+      font-family: Overpass;
+      color: hsl(217, 12%, 63%);
+    }
+
+    .star5 {
+      margin-top: 15px;
+      background-color: hsl(216, 12%, 54%);
+      height: 30px;
+      width: 30px;
+      border-radius: 50%;
+      text-align: center;
+      padding: 10px;
+      font-size: 1.5625rem;
+      margin-left: 10px;
+      margin-bottom: 1.25rem;
+      font-family: Overpass;
+      color: hsl(217, 12%, 63%);
+
+    }
+
+    .star5:hover {
+      background-color: hsl(25, 97%, 53%);
+      cursor: pointer;
+      color: white;
+    }
+
+    .star4:hover {
+      background-color: hsl(25, 97%, 53%);
+      cursor: pointer;
+      color: white;
+    }
+
+    .star3:hover {
+      background-color: hsl(25, 97%, 53%);
+      cursor: pointer;
+      color: white;
+    }
+
+    .star2:hover {
+      background-color: hsl(25, 97%, 53%);
+      cursor: pointer;
+      color: white;
+    }
+
+    .star1:hover {
+      background-color: hsl(25, 97%, 53%);
+      cursor: pointer;
+      color: white;
+    }
+
+    .seven {
+      background-color: hsl(25, 97%, 53%);
+      height: 30px;
+      width: 280px;
+      text-align: center;
+      border-radius: 30px;
+      margin-left: 30px;
+      margin-top: 10px;
+      padding-top: 10px;
+      color: white;
+      font-family: Overpass;
+      justify-content: space-between;
+
+
+
+    }
+
+    .seven:hover {
+      background: white;
+      color: hsl(25, 97%, 53%);
+      cursor: pointer;
+    }
+
+    .thank {
+      /* display: hidden; */
+      position: absolute;
+      background-color: hsl(213, 19%, 18%);
+      z-index: -1;
+      height: 330px;
+      margin-top: 175px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 320px;
+      padding-left: 15px;
+      margin-left: auto;
+      margin-right: auto;
+      padding-right: 15px;
+      border-radius: 0.75rem;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .thankimg {
+      margin-top: 1.5625rem;
+
+
+
+
+    }
+
+    .score {
+      color: hsl(25, 97%, 53%);
+      background-color: hsl(214, 16%, 20%);
+      text-align: center;
+      font-family: Overpass;
+      font-weight: 300;
+      margin-top: 30px;
+      padding-left: 30px;
+      padding-right: 30px;
+      border-radius: 20px;
+      padding-top: 7px;
+      padding-bottom: 7px;
+    }
+
+    .thank p {
+
+      margin-top: 6px;
+      text-align: center;
+      color: hsl(216, 12%, 54%);
+      font-size: 15px;
+    }
+
+    h3 {
+      margin-bottom: 10px;
+      margin-top: 10px;
+      color: white;
+      font-family: Overpass;
+
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="first">
+    <div class="second">
+      <div class="third">
+        <img class="image1" src="images/icon-star.svg" alt="gg">
+      </div>
+    </div>
+
+    <div class="four">How did we do?</div>
+    <div class="five">Please let us know how we did with your support <br>request. All feedback is appreciated
+      to help us<br> improve our offering!
+    </div>
+    <div class="six">
+      <div class="h star1">1
+
+      </div>
+      <div class="h star2">
+        2
+      </div>
+      <div class="h star3">
+        3
+      </div>
+      <div class="h star4">
+        4
+      </div>
+      <div class="h star5">
+        5
+      </div>
+
+    </div>
+    <div class="seven" id="next" type="submit"> S U B M I T</div>
+
+  </div>
+
+  <div class="thank">
+    <img class="thankimg" src="images/illustration-thank-you.svg" alt="">
+    <div class="score">You selected 0 out of 5</div>
+    <h3>Thank You!</h3>
+    <p>We appreciate you taking the time to giving a rating.<br>you ever need more support,don't hesitate to <br> get in
+      touch!</p>
+  </div>
+</body>
+<script src="tut.js"></script>
+
+</html>
